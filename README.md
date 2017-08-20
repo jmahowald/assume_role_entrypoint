@@ -22,6 +22,7 @@ To use this, either just copy the contents into your entrypoint script or put th
 
 ```
 ADD https://raw.githubusercontent.com/jmahowald/assume_role_entrypoint/master/aws_role_entrypoint.sh /usr/local/bin/
+RUN chmod 755 /usr/local/bin/aws_role_entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/aws_role_entrypoint.sh"]
 ```
 
