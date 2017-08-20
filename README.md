@@ -18,5 +18,12 @@ can get a similar json doc as one get's when calling `aws sts assume role`
 Hat tip to [https://github.com/Integralist/Shell-Scripts/blob/master/aws-cli-assumerole.sh](the original jq parsing script)
 
 
+To use this, either just copy the contents into your entrypoint script or put the following in your dockerfile
+
+```
+ADD https://raw.githubusercontent.com/jmahowald/assume_role_entrypoint/master/aws_role_entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["/usr/local/bin/aws_role_entrypoint.sh"]
+```
+
 
 
